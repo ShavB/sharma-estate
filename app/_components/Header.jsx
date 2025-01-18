@@ -6,9 +6,11 @@ import { Plus } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { UserButton, useUser } from "@clerk/nextjs";
 
-export default function Header() {
+function Header() {
   const path = usePathname();
+  const { user, isSignedIn } = useUser();
   useEffect(() => {
     console.log(path);
   });
@@ -41,10 +43,18 @@ export default function Header() {
         <Button className="flex gap-2">
           <Plus className="h-5 w-5" /> Post New Add
         </Button>
-        <Button className="" variant="outline">
-          Login
-        </Button>
+        {isSignedIn ? (
+          <UserButton className="" />
+        ) : (
+          <Link href={"/sign-in"}>
+            <Button className="" variant="outline">
+              Login
+            </Button>{" "}
+          </Link>
+        )}
       </div>
     </div>
   );
 }
+
+export default Header;
