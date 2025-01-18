@@ -1,7 +1,7 @@
 # App task list
 
 - [x] Setup and Header
-- [ ] Authentication (Clerk)
+- [X] Authentication (Clerk)
 - [ ] Backend setup (Supabase (not sure))
 - [ ] Google search Autocomplete for address
 - [ ] Add dummy listing
