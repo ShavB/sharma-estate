@@ -2,7 +2,7 @@
 
 - [x] Setup and Header
 - [X] Authentication (Clerk)
-- [ ] Backend setup (Supabase (not sure))
+- [x] Backend setup (Supabase (not sure))
 - [ ] Google search Autocomplete for address
 - [ ] Add dummy listing
 - [ ] Images (Generate image URL)
